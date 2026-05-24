@@ -1,0 +1,37 @@
+\documentclass[12pt, a4paper, twoside]{report}
+
+% ─── Tous les packages et couleurs ───────────────────────────────────────────
+\input{config/packages}
+
+% ═════════════════════════════════════════════════════════════════════════════
+\begin{document}
+% ═════════════════════════════════════════════════════════════════════════════
+
+% ─── Pages préliminaires (pas de numérotation) ───────────────────────────────
+\pagenumbering{gobble}
+\input{pages/titlepage}
+\input{pages/dedicace}
+\input{pages/remerciements}
+\input{pages/resume}
+
+% ─── Listes (numérotation romaine) ───────────────────────────────────────────
+\pagenumbering{roman}
+\input{pages/abbreviations}
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+% ─── Corps du rapport (numérotation arabe) ───────────────────────────────────
+\pagenumbering{arabic}
+\input{chapitres/introduction}
+\input{chapitres/chapitre1}
+% \input{chapitres/chapitre2}   % décommenter quand prêt
+% \input{chapitres/chapitre3}
+% \input{chapitres/chapitre4}
+% \input{chapitres/conclusion}
+
+% ─── Bibliographie ───────────────────────────────────────────────────────────
+% \printbibliography[heading=bibintoc, title={Bibliographie}]
+
+\end{document}
